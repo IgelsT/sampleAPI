@@ -6,10 +6,7 @@ namespace Controllers;
 
 use App\ApiError;
 use App\ERROR_CODES;
-use App\Mailer;
 use App\Vars;
-use DTO\UserDTO;
-use Models\DeviceModel;
 use Models\UserModel;
 
 class AuthController

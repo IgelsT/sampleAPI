@@ -119,15 +119,6 @@ class MainApp
             throw (new ApiError(ERROR_CODES::$DB_CONNECTION_ERROR));
             exit();
         }
-
-        Mailer::getInstance()->createMailer(
-            Vars::s()['Mailer']['host'],
-            Vars::s()['Mailer']['port'],
-            Vars::s()['Mailer']['user'],
-            Vars::s()['Mailer']['pass'],
-            Vars::s()['replayEmail'],
-            Vars::s()['sendernameEmail']
-        );
     }
 
     private function beforeRoute()

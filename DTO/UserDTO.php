@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DTO;
 
-class UserDTO extends BaseDTO
+class UserDTO
 {
     public $user_id;
     public $user_email;

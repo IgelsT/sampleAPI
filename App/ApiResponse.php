@@ -7,15 +7,10 @@ class ApiResponse
     private $result = 'error';
     private $action = '';
     private $code = 200;
-    private $data = [];
+    private ?array $data;
+    private ?object $error;
 
-    public function __construct(bool $result = false, string $action = '', int $code = 200, array $data = [])
-    {
-        $this->result = ($result) ? 'ok' : 'error';
-        $this->action = $action;
-        $this->code = $code;
-        $this->data = $data;
-    }
+    public function __construct() {}
 
     public function setOK(array $data)
     {
@@ -28,8 +23,7 @@ class ApiResponse
     {
         $this->result = 'error';
         $this->code = $error->httpCode;
-        $this->addData('error', $error);
-        $this->addDataArray($data);
+        $this->error = $error;
     }
 
     function setResult(bool $result)
