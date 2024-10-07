@@ -8,6 +8,6 @@ class TestController
 {
     function index()
     {
-        return ['OK' => 'result'];
+        return ['OK' => 'OK'];
     }
 }
