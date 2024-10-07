@@ -15,6 +15,5 @@ class JSONAttribute
         public string $field,
         public ?string $type = null,
     ) {
-    
     }
 }
